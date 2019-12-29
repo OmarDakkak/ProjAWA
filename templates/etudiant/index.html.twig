@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block title 'Voir liste des etudiants' %}
+{% block body %}
+        <div class="jumbotron">
+            <div class="container">
+                {{ form_start(form)}}
+                <div class="form-row">
+                    <div class="col" id= "Nom">
+                        {{ form_row(form.Nom) }}
+                    </div>
+                    <div class="col" id="Niveau">
+                        {{ form_row(form.niveau) }}
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-primary">Rechercher</button>
+                    </div>
+                </div>
+                {{ form_end(form)}}
+            </div>
+        </div>
+        <h1 class="mt-4 mb-3 ml-5">Liste des étudiants</h1>
+        <div class="card-columns mt-4 ml-4 row" id="cards">
+        {% for etudiant in Etudiants %}
+            <div class="card border-primary ml-4 {{ etudiant.niveau }}" style="width: 18rem;">
+                <img src="{{asset('images/student'~ etudiant.getIdE()~'.png')}}" class="card-img-top" alt="..." height="220px" width="120px">
+                <div class="card-body">
+                    <h5 class="card-title">Nom: {{ etudiant.nom  }} {{ etudiant.prenom }}</h5>
+                    <p class="card-text">Niveau: {{etudiant.niveau}}</p>
+                    <a href="{{ path('etudiant.show', {id: etudiant.getIdE(), slug: etudiant.slug}) }}" class="btn btn-primary">Plus d'actions</a>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+{% endblock %}

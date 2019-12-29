@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+        <style>
+            .required{
+                margin-right:10px;
+                margin-left:-30px
+            }
+            label{
+                margin-right:10px;
+            }
+        </style>
+        {% endblock %}
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="{{ path('home')}}">Gestion Etudiants</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}"  href="{{ path('etudiant.index') }}"> Liste des Étudiants</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}"  href="{{ path('etudiant.index') }}"> Gestion des notes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}"  href="{{ path('etudiant.index') }}"> Gestion des Abscences</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}"  href="{{ path('etudiant.index') }}"> Rapport des Étudiants</a>
+                    </li>
+                    {# <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li> #}
+
+                    {# <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li> #}
+                    </ul>
+                </div>
+            </nav>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script>
+            
+                var Nom = window.location.href.split('?')[1].split('&')[0].split('=')[1];
+                {# var regexNom = new RegExp('/'Nom'/g'); #}
+                var strings =document.getElementsByTagName('h5')
+
+                var Niveau = window.location.href.split('?')[1].split('&')[1].split('=')[1];
+                var GI2 = document.getElementsByClassName("GI2");
+                var GI1 = document.getElementsByClassName("GI1");
+                if(Niveau == "GI1"){
+                    for (var i=0;i<GI2.length;i++){
+                        GI2[i].style.display = 'none';
+                    }
+                }else if(Niveau == "GI2"){
+                    for (var i=0;i<GI1.length;i++){
+                        GI1[i].style.display = 'none';
+                    }
+                }
+                for(var i=0;i<strings.length;i++){
+                    var str = strings[i].innerText;
+                    if(str.indexOf(Nom) != -1 && Nom != ""){
+                        strings[i].parentNode.parentNode.style.backgroundColor= '#5BB55B';
+                    }    
+                }
+                
+                
+            
+            
+            {# function myFunction1() {
+                var id1 = document.getElementById("GI1-ch").value;
+                if(id1.checked == true){
+                    var GI2 = document.getElementsByClassName("GI2");
+                    for (var i=0;i<GI2.length;i+=1){
+                        GI2[i].style.display = 'none';
+                    }
+                }
+            }
+            function myFunction2() {
+                var id2 = document.getElementById("GI2-ch").value;
+                if(id2.checked == true){
+                    var GI1 = document.getElementsByClassName("GI1");
+                    for (var i=0;i<GI1.length;i+=1){
+                        GI1[i].style.display = 'none';
+                    }
+                }
+            }
+             #}
+            
+            {# switch(id){
+                case "GI1":
+                    var GI2 = document.getElementsByClassName("GI2");
+                    for (var i=0;i<GI2.length;i+=1){
+                     GI2[i].style.display = 'none';
+                    }
+                    break;
+                case "GI2":
+                    var GI1 = document.getElementsByClassName("GI1");
+                    for (var i=0;i<GI1.length;i+=1){
+                     GI1[i].style.display = 'none';
+                    } 
+                    break;  
+
+            } #}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+{% extends "base.html.twig" %}
+
+{% block title 'Gestion des etudiants' %}
+
+{% block body %}
+
+        {# <div class="jumbotron text-center">
+            <h1>Ecole Nationale des sciences appliquées - Al Hoceima</h1>
+            <p>Ceci est une application pour la gestion des etudiants, developpée en utilisant le Framework Symfony </p>
+        </div> #}
+        <section id="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="promo-title">Projet d'Applications WEB Avancées</p>
+                        <p> Ceci est une application pour la gestion des etudiants, developpée en utilisant le Framework Symfony.</p>
+                        <p> Ce projet a été réalisé par : Omar Dakkak, Abdelfettah Hajjioui, Mory Moussa Camara, Chaymae Oundouh, Moutaai Souhail, Zouine Anas</p>
+                        <p>Encadré par : Pr. Sara Koulali</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{asset('images/prof.png')}}" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- <img src="images/bottom-wave.png" class="botom-img"> -->
+        <svg id="curve" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 236.76"><path class="cls-1" d="M0,211.42c58.08-34.71,187.11-101.25,364.41-106.6,157.37-4.74,249.85,51.77,363.24,80.89C873.29,223.11,1091,228.59,1400,78.35V315.12H0Z" transform="translate(0 -78.35)"/>
+        </svg>
+        </section>
+
+    <!-- <img src="images/bottom-wave.png" class="botom-img"> -->
+{# <svg id="curve" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 236.76"><path class="cls-1" d="M0,211.42c58.08-34.71,187.11-101.25,364.41-106.6,157.37-4.74,249.85,51.77,363.24,80.89C873.29,223.11,1091,228.59,1400,78.35V315.12H0Z" transform="translate(0 -78.35)"/> #}
+</svg>
+</section>
+       
+{% endblock %}
+
+
+ {# <div class="container">
+            <h2>Les Etudiants</h2>
+            <div class="row flex">
+            <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                            <th scope="col">CNE</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prenom</th>
+                            <th scope="col">CIN</th>
+                            <th scope="col">Tel</th>
+                            <th scope="col">Date de Naissance</th>
+                            <th scope="col">Adresse</th>
+                            <th scope="col">Niveau</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                {% for Etudiant in Etudiants %}
+                            <tr>
+                            <td>{{Etudiant.cNE}}</td>
+                            <td>{{Etudiant.nom}}</td>
+                            <td>{{Etudiant.prenom}}</td>
+                            <td>{{Etudiant.cIN}}</td>
+                            <td>{{Etudiant.tel}}</td>
+                            <td>{{Etudiant.dateNaiss}}</td>
+                            <td>{{Etudiant.adresse}}</td>
+                            <td>{{Etudiant.niveau}}</td>
+                            </tr>
+                {% endfor %}
+                        </tbody>
+                </table>
+            </div>
+        </div> #}

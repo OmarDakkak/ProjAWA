@@ -1,0 +1,23 @@
+#banner{
+    background-image: linear-gradient(to right, #86c2da, #007bff);
+    color: #fff;
+    padding-top: 5%;
+}
+.promo-title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 100px;
+    font-family: 'Press Start 2P', cursive;  
+}
+.botom-img{
+    width: 100%
+}
+#curve{
+    width: 100%;
+}
+#curve path{
+    fill: #fff;
+}
+.bg-primary{
+    background-image: linear-gradient(to right, #86c2da, #007bff);
+}
