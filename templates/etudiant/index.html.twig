@@ -27,7 +27,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Nom: {{ etudiant.nom  }} {{ etudiant.prenom }}</h5>
                     <p class="card-text">Niveau: {{etudiant.niveau}}</p>
-                    <a href="{{ path('etudiant.show', {id: etudiant.getIdE(), slug: etudiant.slug}) }}" class="btn btn-primary">Plus d'actions</a>
+                    <a href="{{ path('etudiant.show', {id_e: etudiant.getIdE(), slug: etudiant.slug}) }}" class="btn btn-primary">Plus d'actions</a>
                 </div>
             </div>
         {% endfor %}

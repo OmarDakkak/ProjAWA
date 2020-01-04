@@ -16,6 +16,8 @@ return [
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     'etudiant.index' => [[], ['_controller' => 'App\\Controller\\EtudiantController::index'], [], [['text', '/etudiants']], [], []],
-    'etudiant.show' => [['slug', 'id'], ['_controller' => 'App\\Controller\\EtudiantController::show'], ['slug' => '[a-z0-9\\-]*'], [['variable', '-', '[^/]++', 'id'], ['variable', '/', '[a-z0-9\\-]*', 'slug'], ['text', '/etudiants']], [], []],
+    'ajout-Etudiant' => [[], ['_controller' => 'App\\Controller\\EtudiantController::form'], [], [['text', '/ajout-Etudiant']], [], []],
+    'edit-Etudiant' => [['id'], ['_controller' => 'App\\Controller\\EtudiantController::form'], [], [['text', '/edit-Etudiant'], ['variable', '/', '[^/]++', 'id'], ['text', '/etudiants']], [], []],
+    'etudiant.show' => [['slug', 'id_e'], ['_controller' => 'App\\Controller\\EtudiantController::show'], ['slug' => '[a-z0-9\\-]*'], [['variable', '-', '[^/]++', 'id_e'], ['variable', '/', '[a-z0-9\\-]*', 'slug'], ['text', '/etudiants']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
 ];

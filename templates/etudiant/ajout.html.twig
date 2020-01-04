@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscriptions{% endblock %}
+{% form_theme formEtudiant 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+    {% if editMode%}
+        <h1 class="">Modifier l'étudiant!</h1>
+    {% else %}
+        <h1 style="margin-left:200px">Inscrire l'étudiant!</h1>
+    {% endif %}
+    <div class="container">
+    {{ form_start(formEtudiant) }}
+        <div class="col-6">
+        {{ form_widget(formEtudiant) }}
+        </div>
+    </div>
+
+    {# {{ form_row(formEtudiant.chef,{'attr': {'placeholder': "nom complet du chef de departement"}}) }}
+    {{ form_row(formEtudiant.description) }} #}
+    <button type="submit" class="btn btn-success">
+        {% if editMode%}
+            Modifier
+        {% else %}
+            Ajouter
+        {% endif %}
+    </button>
+    {{ form_end(formEtudiant) }}
+{% endblock %}

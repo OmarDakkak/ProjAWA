@@ -14,6 +14,7 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/etudiants' => [[['_route' => 'etudiant.index', '_controller' => 'App\\Controller\\EtudiantController::index'], null, null, null, false, false, null]],
+        '/ajout-Etudiant' => [[['_route' => 'ajout-Etudiant', '_controller' => 'App\\Controller\\EtudiantController::form'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
@@ -33,7 +34,10 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/etudiants/([a-z0-9\\-]*)\\-([^/]++)(*:203)'
+                .'|/etudiants/(?'
+                    .'|([^/]++)/edit\\-Etudiant(*:206)'
+                    .'|([a-z0-9\\-]*)\\-([^/]++)(*:237)'
+                .')'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -44,8 +48,9 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        203 => [
-            [['_route' => 'etudiant.show', '_controller' => 'App\\Controller\\EtudiantController::show'], ['slug', 'id'], null, null, false, true, null],
+        206 => [[['_route' => 'edit-Etudiant', '_controller' => 'App\\Controller\\EtudiantController::form'], ['id'], null, null, false, false, null]],
+        237 => [
+            [['_route' => 'etudiant.show', '_controller' => 'App\\Controller\\EtudiantController::show'], ['slug', 'id_e'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

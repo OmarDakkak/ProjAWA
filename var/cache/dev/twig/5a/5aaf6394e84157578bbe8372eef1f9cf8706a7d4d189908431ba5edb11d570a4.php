@@ -56,12 +56,12 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
         ";
         // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 19
+        // line 23
         echo "    </head>
     <body>
             <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
                 <a class=\"navbar-brand\" href=\"";
-        // line 22
+        // line 26
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Gestion Etudiants</a>
                 <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -72,8 +72,8 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
                     <ul class=\"navbar-nav mr-auto\">
                     <li class=\"nav-item\">
                         <a class=\"nav-link ";
-        // line 30
-        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 30, $this->source); })()) == "etudiants"))) {
+        // line 34
+        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 34, $this->source); })()) == "etudiants"))) {
             echo "active";
         }
         echo "\"  href=\"";
@@ -83,24 +83,13 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
                     <li class=\"nav-item\">
                         <a class=\"nav-link ";
-        // line 34
-        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 34, $this->source); })()) == "etudiants"))) {
-            echo "active";
-        }
-        echo "\"  href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant.index");
-        echo "\"> Gestion des notes</a>
-                    </li>
-
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link ";
         // line 38
         if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 38, $this->source); })()) == "etudiants"))) {
             echo "active";
         }
         echo "\"  href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant.index");
-        echo "\"> Gestion des Abscences</a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajout-Etudiant");
+        echo "\"> Inscriptions</a>
                     </li>
 
                     <li class=\"nav-item\">
@@ -111,23 +100,34 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
         }
         echo "\"  href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant.index");
+        echo "\"> Gestion des Abscences</a>
+                    </li>
+
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link ";
+        // line 46
+        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 46, $this->source); })()) == "etudiants"))) {
+            echo "active";
+        }
+        echo "\"  href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant.index");
         echo "\"> Rapport des Étudiants</a>
                     </li>
                     ";
-        // line 47
+        // line 51
         echo "
                     ";
-        // line 59
+        // line 63
         echo "                    </ul>
                 </div>
             </nav>
         ";
-        // line 62
+        // line 66
         $this->displayBlock('body', $context, $blocks);
-        // line 63
+        // line 67
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 64
+        // line 68
         echo "        <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
@@ -135,7 +135,7 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
             
                 var Nom = window.location.href.split('?')[1].split('&')[0].split('=')[1];
                 ";
-        // line 71
+        // line 75
         echo "                var strings =document.getElementsByTagName('h5')
 
                 var Niveau = window.location.href.split('?')[1].split('&')[1].split('=')[1];
@@ -161,10 +161,10 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
             
             
             ";
-        // line 114
+        // line 118
         echo "            
             ";
-        // line 130
+        // line 134
         echo "        </script>
     </body>
 </html>
@@ -211,12 +211,11 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\"/>
         <style>
-            .required{
-                margin-right:10px;
-                margin-left:-30px
-            }
-            label{
-                margin-right:10px;
+            ";
+        // line 17
+        echo "            .btn-success {
+                margin-left: 170px;
+
             }
         </style>
         ";
@@ -228,7 +227,7 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
     }
 
-    // line 62
+    // line 66
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -246,7 +245,7 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
     }
 
-    // line 63
+    // line 67
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -276,7 +275,7 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
     public function getDebugInfo()
     {
-        return array (  250 => 63,  232 => 62,  210 => 8,  200 => 7,  181 => 5,  168 => 130,  165 => 114,  139 => 71,  131 => 64,  128 => 63,  126 => 62,  121 => 59,  118 => 47,  109 => 42,  98 => 38,  87 => 34,  76 => 30,  65 => 22,  60 => 19,  58 => 7,  53 => 5,  47 => 1,);
+        return array (  249 => 67,  231 => 66,  216 => 17,  210 => 8,  200 => 7,  181 => 5,  168 => 134,  165 => 118,  139 => 75,  131 => 68,  128 => 67,  126 => 66,  121 => 63,  118 => 51,  109 => 46,  98 => 42,  87 => 38,  76 => 34,  65 => 26,  60 => 23,  58 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -290,12 +289,16 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
         {% block stylesheets %}
         <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\"/>
         <style>
-            .required{
+            {# .required{
                 margin-right:10px;
                 margin-left:-30px
             }
             label{
                 margin-right:10px;
+            } #}
+            .btn-success {
+                margin-left: 170px;
+
             }
         </style>
         {% endblock %}
@@ -314,7 +317,7 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
                     </li>
 
                     <li class=\"nav-item\">
-                        <a class=\"nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}\"  href=\"{{ path('etudiant.index') }}\"> Gestion des notes</a>
+                        <a class=\"nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}\"  href=\"{{ path('ajout-Etudiant') }}\"> Inscriptions</a>
                     </li>
 
                     <li class=\"nav-item\">

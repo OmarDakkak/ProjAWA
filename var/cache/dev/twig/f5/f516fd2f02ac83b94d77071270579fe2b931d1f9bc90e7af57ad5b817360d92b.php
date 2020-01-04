@@ -142,7 +142,7 @@ class __TwigTemplate_852710ef876b39824ea0bcce2afc3f50e3e10e191916501f7a7c9872fc3
             echo "</p>
                     <a href=\"";
             // line 30
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant.show", ["id" => twig_get_attribute($this->env, $this->source, $context["etudiant"], "getIdE", [], "method", false, false, false, 30), "slug" => twig_get_attribute($this->env, $this->source, $context["etudiant"], "slug", [], "any", false, false, false, 30)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant.show", ["id_e" => twig_get_attribute($this->env, $this->source, $context["etudiant"], "getIdE", [], "method", false, false, false, 30), "slug" => twig_get_attribute($this->env, $this->source, $context["etudiant"], "slug", [], "any", false, false, false, 30)]), "html", null, true);
             echo "\" class=\"btn btn-primary\">Plus d'actions</a>
                 </div>
             </div>
@@ -208,7 +208,7 @@ class __TwigTemplate_852710ef876b39824ea0bcce2afc3f50e3e10e191916501f7a7c9872fc3
                 <div class=\"card-body\">
                     <h5 class=\"card-title\">Nom: {{ etudiant.nom  }} {{ etudiant.prenom }}</h5>
                     <p class=\"card-text\">Niveau: {{etudiant.niveau}}</p>
-                    <a href=\"{{ path('etudiant.show', {id: etudiant.getIdE(), slug: etudiant.slug}) }}\" class=\"btn btn-primary\">Plus d'actions</a>
+                    <a href=\"{{ path('etudiant.show', {id_e: etudiant.getIdE(), slug: etudiant.slug}) }}\" class=\"btn btn-primary\">Plus d'actions</a>
                 </div>
             </div>
         {% endfor %}

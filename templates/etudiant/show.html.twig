@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}La liste des etudiants!{% endblock %}
+
+{% block body %}
+    <section class="etudiant">
+                <h3>Nom complet de l'etudiant</h3>
+                <p> {{ etudiant.getNom() }} {{ etudiant.getPrenom() }}</p>
+                <h3>CNE</h3>
+                <p> {{ etudiant.getCNE() }}</p>
+                <h3>CIN</h3>
+                <p> {{ etudiant.getCIN() }}</p>
+                <h3>Numéro de téléphone</h3>
+                <p>{{ etudiant.getTel() }}</p>
+                <h3>Date de naissance</h3>
+                <p>{{ etudiant.getDateNaiss() }}</p>
+                <h3>Adresse</h3>
+                <p>{{ etudiant.getAdresse() }}</p>
+                <h3>Niveau</h3>
+                <p>{{ etudiant.getNiveau() }}</p>
+                <h4>Les matieres</h4>
+                <ul>
+                {% for matiere in etudiant.niveau.matieres %}
+                    <li>{{ matiere }}</li>
+                {% endfor %}
+                </ul>
+                <img src="{{asset('images/student'~ etudiant.getIdE()~'.png')}}" class="card-img-top" alt="..." height="220px" width="120px">
+            <a href="{{ etudiant.getId }}/edit-Etudiant" class="btn btn-primary">Modifier etudiant</a>
+
+
+    </section>
+
+{% endblock %}

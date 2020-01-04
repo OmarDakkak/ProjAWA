@@ -7,12 +7,16 @@
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
         <style>
-            .required{
+            {# .required{
                 margin-right:10px;
                 margin-left:-30px
             }
             label{
                 margin-right:10px;
+            } #}
+            .btn-success {
+                margin-left: 170px;
+
             }
         </style>
         {% endblock %}
@@ -31,7 +35,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}"  href="{{ path('etudiant.index') }}"> Gestion des notes</a>
+                        <a class="nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}"  href="{{ path('ajout-Etudiant') }}"> Inscriptions</a>
                     </li>
 
                     <li class="nav-item">

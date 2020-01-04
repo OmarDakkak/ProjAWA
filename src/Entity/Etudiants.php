@@ -53,14 +53,14 @@ class Etudiants
     private $Adresse;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Niveau;
-
-    /**
      * @ORM\Column(type="integer")
      */
     private $id_e;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Niveau", inversedBy="etudiants")
+     */
+    private $niveau;
 
     public function getId(): ?int
     {
@@ -155,18 +155,6 @@ class Etudiants
         return $this;
     }
 
-    public function getNiveau(): ?string
-    {
-        return $this->Niveau;
-    }
-
-    public function setNiveau(string $Niveau): self
-    {
-        $this->Niveau = $Niveau;
-
-        return $this;
-    }
-
     public function getIdE(): ?int
     {
         return $this->id_e;
@@ -175,6 +163,18 @@ class Etudiants
     public function setIdE(int $id_e): self
     {
         $this->id_e = $id_e;
+
+        return $this;
+    }
+
+    public function getNiveau(): ?Niveau
+    {
+        return $this->niveau;
+    }
+
+    public function setNiveau(?Niveau $niveau): self
+    {
+        $this->niveau = $niveau;
 
         return $this;
     }
