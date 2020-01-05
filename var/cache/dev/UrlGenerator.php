@@ -20,4 +20,8 @@ return [
     'edit-Etudiant' => [['id'], ['_controller' => 'App\\Controller\\EtudiantController::form'], [], [['text', '/edit-Etudiant'], ['variable', '/', '[^/]++', 'id'], ['text', '/etudiants']], [], []],
     'etudiant.show' => [['slug', 'id_e'], ['_controller' => 'App\\Controller\\EtudiantController::show'], ['slug' => '[a-z0-9\\-]*'], [['variable', '-', '[^/]++', 'id_e'], ['variable', '/', '[a-z0-9\\-]*', 'slug'], ['text', '/etudiants']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
+    'note.index' => [[], ['_controller' => 'App\\Controller\\NoteController::index'], [], [['text', '/note']], [], []],
+    'ajout-Note' => [[], ['_controller' => 'App\\Controller\\NoteController::form'], [], [['text', '/ajout-Note']], [], []],
+    'edit-Note' => [['id'], ['_controller' => 'App\\Controller\\NoteController::form'], [], [['text', '/edit-Note'], ['variable', '/', '[^/]++', 'id'], ['text', '/Note']], [], []],
+    'note.show' => [['slug', 'id'], ['_controller' => 'App\\Controller\\NoteController::show'], ['slug' => '[a-z0-9\\-]*'], [['variable', '-', '[^/]++', 'id'], ['variable', '/', '[a-z0-9\\-]*', 'slug'], ['text', '/note']], [], []],
 ];

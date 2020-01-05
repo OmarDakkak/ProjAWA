@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscriptions{% endblock %}
+{% form_theme formNote 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+    {% if editMode%}
+        <h1 style ="text-align:center; margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff">Modifier la note</h1>
+    {% else %}
+        <h1 style="text-align:center; margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff">Ajouter la note</h1>
+    {% endif %}
+    {# <div class="container">
+    {{ form_start(formNote) }}
+        <div class="col-6">
+        {{ form_widget(formNote) }}
+        </div>
+    </div> #}
+
+    <div class="row" style = "margin : 3em">
+        <div class="col-md-4">
+            {{ form_row(formNote.etudiant, {'label': 'Nom Complet'}) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(formNote.matiere, {'label': 'Matiere'}) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(formNote.note, {'label': 'Note'}) }}
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:20px">
+        {% if editMode%}
+            Modifier
+        {% else %}
+            Ajouter
+        {% endif %}
+    </button>
+        
+    </div>
+
+    {# {{ form_row(formNote.chef,{'attr': {'placeholder': "nom complet du chef de departement"}}) }}
+    {{ form_row(formNote.description) }} #}
+    {# <button type="submit" class="btn btn-primary btn-lg btn-block" style = "margin : 3em" >
+        {% if editMode%}
+            Modifier
+        {% else %}
+            Ajouter
+        {% endif %}
+    </button> #}
+    {{ form_end(formNote) }}
+{% endblock %}

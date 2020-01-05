@@ -44,12 +44,12 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}"  href="{{ path('etudiant.index') }}"> Gestion des Abscences</a>
+                        <a class="nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}"  href="{{ path('note.index') }}"> Gestion des Notes</a>
                     </li>
 
-                    <li class="nav-item">
+                    {# <li class="nav-item">
                         <a class="nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}"  href="{{ path('etudiant.index') }}"> Rapport des Étudiants</a>
-                    </li>
+                    </li> #}
                     {# <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li> #}
@@ -143,6 +143,98 @@
 
             var elem1 = document.getElementById('Nom');
             elem1.classList.add("form-control");
+        </script>
+        {# <script>
+            var matiere = window.location.href.split('?')[1].split('=')[1];
+            var elems = document.getElementsByTagName('tr');
+            switch(matiere){
+                case 'COMPLEXITE':
+                for(i=0; i< elems.length; i++){
+                    document.getElementsByClassName('MACHINE_LEARNING')[i].style.display = 'none';
+                    document.getElementsByClassName('AWA')[i].style.display = 'none';
+                    document.getElementsByClassName('POO_EN_JAVA')[i].style.display = 'none';
+                }
+                break; 
+
+                case 'MACHINE_LEARNING':
+                for(i=0; i< elems.length; i++){
+                    document.getElementsByClassName('AWA')[i].style.display = 'none';
+                    document.getElementsByClassName('POO_EN_JAVA')[i].style.display = 'none';
+                    document.getElementsByClassName('COMPLEXITE')[i].style.display = 'none';                    
+                }
+                break; 
+
+                case 'AWA':
+                for(i=0; i< elems.length; i++){
+                    document.getElementsByClassName('COMPLEXITE')[i].style.display = 'none';
+                    document.getElementsByClassName('POO_EN_JAVA')[i].style.display = 'none';
+                    document.getElementsByClassName('MACHINE_LEARNING')[i].style.display = 'none';
+                }
+                break; 
+
+                case 'POO_EN_JAVA':
+                for(i=0; i< elems.length; i++){
+                    document.getElementsByClassName('MACHINE_LEARNING')[i].style.display = 'none';
+                    document.getElementsByClassName('COMPLEXITE')[i].style.display = 'none';
+                    document.getElementsByClassName('AWA')[i].style.display = 'none';
+                }
+                break;   
+            }
+        </script> #}
+        <script>
+            java = document.getElementsByClassName('POO_EN_JAVA');
+            ML = document.getElementsByClassName('MACHINE_LEARNING');
+            AWA = document.getElementsByClassName('AWA');
+            COMP = document.getElementsByClassName('COMPLEXITE');
+            var matiere = window.location.href.split('?')[1].split('=')[1];
+            if(matiere == 'POO_EN_JAVA'){
+                for(var i=0;i<ML.length;i++){
+                    ML[i].style.display = 'none';
+                }
+                for(var i=0;i<AWA.length;i++){
+                    AWA[i].style.display = 'none';
+                }
+                for(var i=0;i<COMP.length;i++){
+                    COMP[i].style.display = 'none';
+                }
+
+            }else if(matiere == 'MACHINE_LEARNING'){
+                for(var i=0;i<java.length;i++){
+                    java[i].style.display = 'none';
+                }
+                for(var i=0;i<AWA.length;i++){
+                    AWA[i].style.display = 'none';
+                }
+                for(var i=0;i<COMP.length;i++){
+                    COMP[i].style.display = 'none';
+                }
+
+            }else if(matiere == 'AWA'){
+                for(var i=0;i<ML.length;i++){
+                    ML[i].style.display = 'none';
+                }
+                for(var i=0;i<java.length;i++){
+                    java[i].style.display = 'none';
+                }
+                for(var i=0;i<COMP.length;i++){
+                    COMP[i].style.display = 'none';
+                }
+
+            }else if(matiere == 'COMPLEXITE'){
+                for(var i=0;i<ML.length;i++){
+                    ML[i].style.display = 'none';
+                }
+                for(var i=0;i<AWA.length;i++){
+                    AWA[i].style.display = 'none';
+                }
+                for(var i=0;i<java.length;i++){
+                    java[i].style.display = 'none';
+                }
+            }  
+        </script>
+        <script>
+            var elem = document.getElementById('Matiere');
+            elem.classList.add("form-control");
         </script>
     </body>
 </html>

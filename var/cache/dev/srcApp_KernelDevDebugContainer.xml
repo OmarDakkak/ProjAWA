@@ -332,6 +332,14 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\HomeController"/>
       </call>
     </service>
+    <service id="App\Controller\NoteController" class="App\Controller\NoteController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\NoteRepository"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\NoteController"/>
+      </call>
+    </service>
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
@@ -342,6 +350,12 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Form\EtudiantType" class="App\Form\EtudiantType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\NoteSearchType" class="App\Form\NoteSearchType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\NoteType" class="App\Form\NoteType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Repository\EtudiantsRepository" class="App\Repository\EtudiantsRepository" autowire="true" autoconfigure="true">
@@ -782,6 +796,8 @@
       <argument type="collection">
         <argument>App\Form\EtudiantSearchType</argument>
         <argument>App\Form\EtudiantType</argument>
+        <argument>App\Form\NoteSearchType</argument>
+        <argument>App\Form\NoteType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1120,7 +1136,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.mDVU7xl"/>
+      <argument type="service" id=".service_locator.mtbOhNn"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4679,6 +4695,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\NoteController" class="App\Controller\NoteController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\NoteController" class="App\Controller\NoteController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\NoteController" class="App\Controller\NoteController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\EtudiantFixture" class="App\DataFixtures\EtudiantFixture" autowire="true" abstract="true"/>
@@ -4687,6 +4706,10 @@
     <service id=".abstract.instanceof.App\Form\EtudiantSearchType" class="App\Form\EtudiantSearchType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EtudiantType" class="App\Form\EtudiantType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\EtudiantType" class="App\Form\EtudiantType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\NoteSearchType" class="App\Form\NoteSearchType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\NoteSearchType" class="App\Form\NoteSearchType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\NoteType" class="App\Form\NoteType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\NoteType" class="App\Form\NoteType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EtudiantsRepository" class="App\Repository\EtudiantsRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\EtudiantsRepository" class="App\Repository\EtudiantsRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MatiereRepository" class="App\Repository\MatiereRepository" autowire="true" abstract="true"/>
@@ -4890,11 +4913,23 @@
         <argument key="etudiant" type="service" id=".errored..service_locator.pIUQkC7.App\Entity\Etudiants"/>
       </argument>
     </service>
-    <service id=".service_locator.WFQeas7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.3AA.JFf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id=".service_locator.LW74jiC" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="Note" type="service" id=".errored..service_locator.LW74jiC.App\Entity\Note"/>
+      </argument>
+    </service>
+    <service id=".service_locator.LNcWpp4" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\EtudiantController::show" type="service" id=".service_locator.pIUQkC7"/>
+        <argument key="App\Controller\NoteController::show" type="service" id=".service_locator.LW74jiC"/>
         <argument key="App\Controller\EtudiantController:show" type="service" id=".service_locator.pIUQkC7"/>
+        <argument key="App\Controller\NoteController:show" type="service" id=".service_locator.LW74jiC"/>
       </argument>
     </service>
     <service id=".service_locator.Y7gDuDN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -4956,11 +4991,13 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.mDVU7xl" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.mtbOhNn" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\EtudiantSearchType" type="service" id="App\Form\EtudiantSearchType"/>
         <argument key="App\Form\EtudiantType" type="service" id="App\Form\EtudiantType"/>
+        <argument key="App\Form\NoteSearchType" type="service" id="App\Form\NoteSearchType"/>
+        <argument key="App\Form\NoteType" type="service" id="App\Form\NoteType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FileType" type="service" id="form.type.file"/>
@@ -5196,6 +5233,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\NoteController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\NoteController"/>
+      <argument>App\Controller\NoteController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
     <service id=".service_locator.XSes1R5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5327,12 +5370,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.WFQeas7"/>
+      <argument type="service" id=".service_locator.LNcWpp4"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.WFQeas7"/>
+      <argument type="service" id=".service_locator.LNcWpp4"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5343,6 +5386,7 @@
       <factory class="Symfony\Component\HttpClient\HttpClient" method="create"/>
     </service>
     <service id=".errored..service_locator.pIUQkC7.App\Entity\Etudiants" class="App\Entity\Etudiants"/>
+    <service id=".errored..service_locator.LW74jiC.App\Entity\Note" class="App\Entity\Note"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.6uSmfdB"/>
       <argument type="collection">
@@ -5715,7 +5759,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.WFQeas7"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.LNcWpp4"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

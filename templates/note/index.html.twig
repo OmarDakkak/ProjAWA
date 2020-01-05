@@ -1,0 +1,77 @@
+{% extends "base.html.twig" %}
+
+{% block title 'Voir liste des notes' %}
+{% block body %}
+        <div class="jumbotron">
+            
+                {# <div class="container">
+                    <form method="GET">
+                        <div class="col" id= "Nom">
+                            <label for="nom">Nom</label>
+                            <input type="text" class="form-control" id="nom" aria-describedby="desc" placeholder="Entrer le nom!">
+                            <small id="desc" class="form-text text-muted">soit le nom soit le prenom!</small>
+                        </div>
+                        <div class="col" id="Niveau">
+                            <label for="niveau">Niveau</label>
+                            <select class="form-control" id="niveau">
+                                <option>selectionnez</option>
+                                <option>GI1</option>
+                                <option>GI2</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <input type="submit" class="btn btn-primary" value="rechercher">
+                        </div>
+                    </form>
+                </div> #}
+
+
+            
+            <div class="container">
+                {{ form_start(form)}}
+                <div class="form-row">
+                    {# <div class="col">
+                        {{ form_row(form.etudiant) }}
+                    </div> #}
+                    <div class="col">
+                        {{ form_row(form.Matiere) }}
+                    </div>
+                    {# <div class="col" id="Niveau">
+                        {{ form_row(form.note) }}
+                    </div> #}
+                    <div class="col">
+                        <button class="btn btn-primary" style="margin-top:30px">Rechercher</button>
+                    </div>
+                </div>
+                {{ form_end(form)}}
+            </div>
+        </div>
+        <h1 style ="text-align:center; margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff">Liste des notes</h1>
+        <div style="margin:3em">
+        <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">CNE</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Note Actuelle</th>
+                <th scope="col">Matiere</th>
+                <th scope="col">Ajouter une note</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for n in notes %}
+            <tr class="{{n.matiere}}">
+                <td>{{ n.etudiant.CNE }}</td>
+                <td>{{ n.etudiant.Nom }}</td>
+                <td>{{ n.etudiant.Prenom }}</td>
+                <td>{{ n.note }}</td>
+                <td>{{ n.matiere }}</td>
+                <td><a href="/Note/{{ n.getId }}/edit-Note" class="btn btn-primary">Modifier</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+        </div>
+        
+{% endblock %}

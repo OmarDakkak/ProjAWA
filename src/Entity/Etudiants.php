@@ -178,4 +178,8 @@ class Etudiants
 
         return $this;
     }
+    public function __toString()
+    {
+        return $this->Nom." ".$this->Prenom;
+    }
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jan 04, 2020 at 05:03 PM
+-- Generation Time: Jan 05, 2020 at 04:52 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.8
 
@@ -47,8 +47,8 @@ INSERT INTO `etudiants` (`id`, `cne`, `nom`, `prenom`, `cin`, `tel`, `date_naiss
 (7, 'Z141283456', 'Senhaji', 'Yousra', 'Z613122', '0612121221', '16-09-1999', '22, bloc 1, Hay Al Qods 3, Taza', 7, 1),
 (8, 'Z141283456', 'Mokhtari', 'Zakaryae', 'S613122', '0612124521', '16-05-1998', '22, Hay Mellila, Beni Nsar, Nador', 8, 2),
 (9, 'Z141283456', 'Bendahan', 'Omar', 'Z608298', '0666063087', '21-06-1998', '42, Bloc 4, Hay Al Andalouss, Taza', 9, 2),
-(10, 'Z141213131', 'Malek', 'Jouhayna', 'Z521409', '0666063211', '22-08-1998', '44, Bloc 5, Hay Al Andalouss, Taza', 10, 2),
-(11, 'S148006142', 'Alami', 'Omar', 'Z607398', '0672826152', '23-07-1998', '41, qods, Taza', 11, 2);
+(10, 'Z141213131', 'Camara', 'Mory', 'Z521409', '0666063211', '22-08-1998', 'Diourbel, Sénégal', 10, 2),
+(11, 'S148006142', 'Jouhayna', 'Hurtado', 'Z607398', '0672826152', '23-07-1998', '42, Friouatou, Taza', 11, 2);
 
 -- --------------------------------------------------------
 
@@ -69,8 +69,8 @@ CREATE TABLE `matiere` (
 INSERT INTO `matiere` (`id`, `nom`, `prof_id`) VALUES
 (1, 'COMPLEXITE', 1),
 (2, 'AWA', 2),
-(3, 'MACHINE LEARNING', 4),
-(4, 'POO EN JAVA', 3);
+(3, 'MACHINE_LEARNING', 4),
+(4, 'POO_EN_JAVA', 3);
 
 -- --------------------------------------------------------
 
@@ -151,6 +151,18 @@ CREATE TABLE `note` (
   `matiere_id` int(11) DEFAULT NULL,
   `note` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `note`
+--
+
+INSERT INTO `note` (`id`, `etudiant_id`, `matiere_id`, `note`) VALUES
+(1, 2, 2, 20),
+(2, 1, 3, 19),
+(3, 4, 1, 0),
+(4, 5, 1, 0),
+(5, 10, 4, 18),
+(6, 9, 3, 20);
 
 -- --------------------------------------------------------
 
@@ -233,7 +245,7 @@ ALTER TABLE `professeur`
 -- AUTO_INCREMENT for table `etudiants`
 --
 ALTER TABLE `etudiants`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `matiere`
@@ -251,7 +263,7 @@ ALTER TABLE `niveau`
 -- AUTO_INCREMENT for table `note`
 --
 ALTER TABLE `note`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `professeur`

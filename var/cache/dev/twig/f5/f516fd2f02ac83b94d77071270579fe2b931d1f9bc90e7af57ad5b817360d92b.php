@@ -120,7 +120,7 @@ class __TwigTemplate_852710ef876b39824ea0bcce2afc3f50e3e10e191916501f7a7c9872fc3
         echo "
             </div>
         </div>
-        <h1 class=\"mt-4 mb-3 ml-5\">Liste des étudiants</h1>
+        <h1 class=\"ml-5\" style =\"margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff\">Liste des étudiants</h1>
         <div class=\"card-columns mt-4 ml-4 row\" id=\"cards\">
         ";
         // line 48
@@ -230,7 +230,7 @@ class __TwigTemplate_852710ef876b39824ea0bcce2afc3f50e3e10e191916501f7a7c9872fc3
                 {{ form_end(form)}}
             </div>
         </div>
-        <h1 class=\"mt-4 mb-3 ml-5\">Liste des étudiants</h1>
+        <h1 class=\"ml-5\" style =\"margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff\">Liste des étudiants</h1>
         <div class=\"card-columns mt-4 ml-4 row\" id=\"cards\">
         {% for etudiant in Etudiants %}
             <div class=\"card border-primary ml-4 {{ etudiant.niveau }}\" style=\"width: 18rem;\">

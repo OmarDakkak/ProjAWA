@@ -100,21 +100,13 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
             echo "active";
         }
         echo "\"  href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant.index");
-        echo "\"> Gestion des Abscences</a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("note.index");
+        echo "\"> Gestion des Notes</a>
                     </li>
 
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link ";
-        // line 51
-        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 51, $this->source); })()) == "etudiants"))) {
-            echo "active";
-        }
-        echo "\"  href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant.index");
-        echo "\"> Rapport des Étudiants</a>
-                    </li>
                     ";
+        // line 53
+        echo "                    ";
         // line 56
         echo "
                     ";
@@ -173,6 +165,63 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
             var elem1 = document.getElementById('Nom');
             elem1.classList.add(\"form-control\");
+        </script>
+        ";
+        // line 184
+        echo "        <script>
+            java = document.getElementsByClassName('POO_EN_JAVA');
+            ML = document.getElementsByClassName('MACHINE_LEARNING');
+            AWA = document.getElementsByClassName('AWA');
+            COMP = document.getElementsByClassName('COMPLEXITE');
+            var matiere = window.location.href.split('?')[1].split('=')[1];
+            if(matiere == 'POO_EN_JAVA'){
+                for(var i=0;i<ML.length;i++){
+                    ML[i].style.display = 'none';
+                }
+                for(var i=0;i<AWA.length;i++){
+                    AWA[i].style.display = 'none';
+                }
+                for(var i=0;i<COMP.length;i++){
+                    COMP[i].style.display = 'none';
+                }
+
+            }else if(matiere == 'MACHINE_LEARNING'){
+                for(var i=0;i<java.length;i++){
+                    java[i].style.display = 'none';
+                }
+                for(var i=0;i<AWA.length;i++){
+                    AWA[i].style.display = 'none';
+                }
+                for(var i=0;i<COMP.length;i++){
+                    COMP[i].style.display = 'none';
+                }
+
+            }else if(matiere == 'AWA'){
+                for(var i=0;i<ML.length;i++){
+                    ML[i].style.display = 'none';
+                }
+                for(var i=0;i<java.length;i++){
+                    java[i].style.display = 'none';
+                }
+                for(var i=0;i<COMP.length;i++){
+                    COMP[i].style.display = 'none';
+                }
+
+            }else if(matiere == 'COMPLEXITE'){
+                for(var i=0;i<ML.length;i++){
+                    ML[i].style.display = 'none';
+                }
+                for(var i=0;i<AWA.length;i++){
+                    AWA[i].style.display = 'none';
+                }
+                for(var i=0;i<java.length;i++){
+                    java[i].style.display = 'none';
+                }
+            }  
+        </script>
+        <script>
+            var elem = document.getElementById('Matiere');
+            elem.classList.add(\"form-control\");
         </script>
     </body>
 </html>
@@ -292,7 +341,7 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
     public function getDebugInfo()
     {
-        return array (  266 => 72,  248 => 71,  218 => 9,  208 => 8,  189 => 5,  169 => 139,  166 => 123,  140 => 80,  132 => 73,  129 => 72,  127 => 71,  122 => 68,  119 => 56,  110 => 51,  99 => 47,  88 => 43,  77 => 39,  66 => 31,  61 => 28,  59 => 8,  53 => 5,  47 => 1,);
+        return array (  315 => 72,  297 => 71,  267 => 9,  257 => 8,  238 => 5,  171 => 184,  161 => 139,  158 => 123,  132 => 80,  124 => 73,  121 => 72,  119 => 71,  114 => 68,  111 => 56,  109 => 53,  99 => 47,  88 => 43,  77 => 39,  66 => 31,  61 => 28,  59 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -343,12 +392,12 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
                     </li>
 
                     <li class=\"nav-item\">
-                        <a class=\"nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}\"  href=\"{{ path('etudiant.index') }}\"> Gestion des Abscences</a>
+                        <a class=\"nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}\"  href=\"{{ path('note.index') }}\"> Gestion des Notes</a>
                     </li>
 
-                    <li class=\"nav-item\">
+                    {# <li class=\"nav-item\">
                         <a class=\"nav-link {% if current_menu is defined and current_menu == 'etudiants' %}active{% endif %}\"  href=\"{{ path('etudiant.index') }}\"> Rapport des Étudiants</a>
-                    </li>
+                    </li> #}
                     {# <li class=\"nav-item\">
                         <a class=\"nav-link\" href=\"#\">Link</a>
                     </li> #}
@@ -442,6 +491,98 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
             var elem1 = document.getElementById('Nom');
             elem1.classList.add(\"form-control\");
+        </script>
+        {# <script>
+            var matiere = window.location.href.split('?')[1].split('=')[1];
+            var elems = document.getElementsByTagName('tr');
+            switch(matiere){
+                case 'COMPLEXITE':
+                for(i=0; i< elems.length; i++){
+                    document.getElementsByClassName('MACHINE_LEARNING')[i].style.display = 'none';
+                    document.getElementsByClassName('AWA')[i].style.display = 'none';
+                    document.getElementsByClassName('POO_EN_JAVA')[i].style.display = 'none';
+                }
+                break; 
+
+                case 'MACHINE_LEARNING':
+                for(i=0; i< elems.length; i++){
+                    document.getElementsByClassName('AWA')[i].style.display = 'none';
+                    document.getElementsByClassName('POO_EN_JAVA')[i].style.display = 'none';
+                    document.getElementsByClassName('COMPLEXITE')[i].style.display = 'none';                    
+                }
+                break; 
+
+                case 'AWA':
+                for(i=0; i< elems.length; i++){
+                    document.getElementsByClassName('COMPLEXITE')[i].style.display = 'none';
+                    document.getElementsByClassName('POO_EN_JAVA')[i].style.display = 'none';
+                    document.getElementsByClassName('MACHINE_LEARNING')[i].style.display = 'none';
+                }
+                break; 
+
+                case 'POO_EN_JAVA':
+                for(i=0; i< elems.length; i++){
+                    document.getElementsByClassName('MACHINE_LEARNING')[i].style.display = 'none';
+                    document.getElementsByClassName('COMPLEXITE')[i].style.display = 'none';
+                    document.getElementsByClassName('AWA')[i].style.display = 'none';
+                }
+                break;   
+            }
+        </script> #}
+        <script>
+            java = document.getElementsByClassName('POO_EN_JAVA');
+            ML = document.getElementsByClassName('MACHINE_LEARNING');
+            AWA = document.getElementsByClassName('AWA');
+            COMP = document.getElementsByClassName('COMPLEXITE');
+            var matiere = window.location.href.split('?')[1].split('=')[1];
+            if(matiere == 'POO_EN_JAVA'){
+                for(var i=0;i<ML.length;i++){
+                    ML[i].style.display = 'none';
+                }
+                for(var i=0;i<AWA.length;i++){
+                    AWA[i].style.display = 'none';
+                }
+                for(var i=0;i<COMP.length;i++){
+                    COMP[i].style.display = 'none';
+                }
+
+            }else if(matiere == 'MACHINE_LEARNING'){
+                for(var i=0;i<java.length;i++){
+                    java[i].style.display = 'none';
+                }
+                for(var i=0;i<AWA.length;i++){
+                    AWA[i].style.display = 'none';
+                }
+                for(var i=0;i<COMP.length;i++){
+                    COMP[i].style.display = 'none';
+                }
+
+            }else if(matiere == 'AWA'){
+                for(var i=0;i<ML.length;i++){
+                    ML[i].style.display = 'none';
+                }
+                for(var i=0;i<java.length;i++){
+                    java[i].style.display = 'none';
+                }
+                for(var i=0;i<COMP.length;i++){
+                    COMP[i].style.display = 'none';
+                }
+
+            }else if(matiere == 'COMPLEXITE'){
+                for(var i=0;i<ML.length;i++){
+                    ML[i].style.display = 'none';
+                }
+                for(var i=0;i<AWA.length;i++){
+                    AWA[i].style.display = 'none';
+                }
+                for(var i=0;i<java.length;i++){
+                    java[i].style.display = 'none';
+                }
+            }  
+        </script>
+        <script>
+            var elem = document.getElementById('Matiere');
+            elem.classList.add(\"form-control\");
         </script>
     </body>
 </html>

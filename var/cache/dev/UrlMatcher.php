@@ -16,6 +16,8 @@ return [
         '/etudiants' => [[['_route' => 'etudiant.index', '_controller' => 'App\\Controller\\EtudiantController::index'], null, null, null, false, false, null]],
         '/ajout-Etudiant' => [[['_route' => 'ajout-Etudiant', '_controller' => 'App\\Controller\\EtudiantController::form'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/note' => [[['_route' => 'note.index', '_controller' => 'App\\Controller\\NoteController::index'], null, null, null, false, false, null]],
+        '/ajout-Note' => [[['_route' => 'ajout-Note', '_controller' => 'App\\Controller\\NoteController::form'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -38,6 +40,8 @@ return [
                     .'|([^/]++)/edit\\-Etudiant(*:206)'
                     .'|([a-z0-9\\-]*)\\-([^/]++)(*:237)'
                 .')'
+                .'|/Note/([^/]++)/edit\\-Note(*:271)'
+                .'|/note/([a-z0-9\\-]*)\\-([^/]++)(*:308)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -49,8 +53,10 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         206 => [[['_route' => 'edit-Etudiant', '_controller' => 'App\\Controller\\EtudiantController::form'], ['id'], null, null, false, false, null]],
-        237 => [
-            [['_route' => 'etudiant.show', '_controller' => 'App\\Controller\\EtudiantController::show'], ['slug', 'id_e'], null, null, false, true, null],
+        237 => [[['_route' => 'etudiant.show', '_controller' => 'App\\Controller\\EtudiantController::show'], ['slug', 'id_e'], null, null, false, true, null]],
+        271 => [[['_route' => 'edit-Note', '_controller' => 'App\\Controller\\NoteController::form'], ['id'], null, null, false, false, null]],
+        308 => [
+            [['_route' => 'note.show', '_controller' => 'App\\Controller\\NoteController::show'], ['slug', 'id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
