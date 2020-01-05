@@ -1,28 +1,53 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscriptions{% endblock %}
+{% block title %}Welecom!{% endblock %}
 {% form_theme formEtudiant 'bootstrap_4_layout.html.twig' %}
 {% block body %}
-    {% if editMode%}
-        <h1 class="">Modifier l'étudiant!</h1>
-    {% else %}
-        <h1 style="margin-left:200px">Inscrire l'étudiant!</h1>
-    {% endif %}
     <div class="container">
-    {{ form_start(formEtudiant) }}
-        <div class="col-6">
-        {{ form_widget(formEtudiant) }}
-        </div>
-    </div>
-
-    {# {{ form_row(formEtudiant.chef,{'attr': {'placeholder': "nom complet du chef de departement"}}) }}
-    {{ form_row(formEtudiant.description) }} #}
-    <button type="submit" class="btn btn-success">
         {% if editMode%}
-            Modifier
+        <h1>Modification d'un etudiant!</h1>
+    {% else %}
+        <h1>Ajoutation  d'un etudiant!</h1>
+    {% endif %}
+
+    <div class="row">
+        <div class="col-6">
+            {{ form_start(formEtudiant) }}
+
+            {{ form_row(formEtudiant.cne) }}
+        </div>
+        <div class="col-6">
+            {{ form_row(formEtudiant.id_e) }}
+        </div>
+        <div class="col-6">
+            {{ form_row(formEtudiant.nom,{'attr': {'placeholder': "nom de l'etudiant"}}) }}
+        </div>
+        <div class="col-6">
+            {{ form_row(formEtudiant.prenom) }}
+        </div>
+
+        <div class="col-6">
+            {{ form_row(formEtudiant.email) }}
+        </div>
+
+        <div class="col-6">
+            {{ form_row(formEtudiant.niveau) }}
+        </div>
+
+        <div class="col-6">
+            {{ form_row(formEtudiant.naissance) }}
+        </div>
+        <div class="col-6">
+            {{ form_row(formEtudiant.adresse) }}
+        </div>
+
+    </div>
+    <button type="submit" class="btn btn-success" >
+        {% if editMode%}
+            Modifier etudiant
         {% else %}
-            Ajouter
+            Ajouter etudiant
         {% endif %}
     </button>
-    {{ form_end(formEtudiant) }}
+    {{ form_end(formEtudiant) }}</div>
 {% endblock %}

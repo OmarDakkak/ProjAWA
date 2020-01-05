@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EtudiantsRepository")
@@ -19,38 +20,31 @@ class Etudiants
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="6",minMessage="le cne est trop petit",max="10",maxMessage="le cne ne doit pas depasser 10 caracteres")
      */
-    private $CNE;
+    private $cne;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Nom;
+    private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Prenom;
+    private $prenom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\Email(message="saisie non valide")
+     */
+    private $email;
+
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $CIN;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Tel;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Date_naiss;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Adresse;
+    private $adresse;
 
     /**
      * @ORM\Column(type="integer")
@@ -62,95 +56,82 @@ class Etudiants
      */
     private $niveau;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $naissance;
+
+
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getCNE(): ?string
+    public function getCne(): ?string
     {
-        return $this->CNE;
+        return $this->cne;
     }
 
-    public function setCNE(string $CNE): self
+    public function setCne(string $cne): self
     {
-        $this->CNE = $CNE;
+        $this->cne = $cne;
 
         return $this;
     }
 
     public function getNom(): ?string
     {
-        return $this->Nom;
+        return $this->nom;
     }
 
-    public function setNom(string $Nom): self
+    public function setNom(string $nom): self
     {
-        $this->Nom = $Nom;
+        $this->nom = $nom;
 
         return $this;
     }
 
     public function getPrenom(): ?string
     {
-        return $this->Prenom;
+        return $this->prenom;
     }
 
-    public function setPrenom(string $Prenom): self
+    public function setPrenom(string $prenom): self
     {
-        $this->Prenom = $Prenom;
+        $this->prenom = $prenom;
 
         return $this;
     }
 
     public function getSlug(): string {
-        return (new Slugify())->slugify($this->Nom." ".$this->Prenom);
+        return (new Slugify())->slugify($this->nom." ".$this->prenom);
     }
 
-    public function getCIN(): ?string
+
+
+    public function getEmail(): ?string
     {
-        return $this->CIN;
+        return $this->email;
     }
 
-    public function setCIN(string $CIN): self
+    public function setEmail(string $email): self
     {
-        $this->CIN = $CIN;
+        $this->email = $email;
 
         return $this;
     }
 
-    public function getTel(): ?string
-    {
-        return $this->Tel;
-    }
 
-    public function setTel(string $Tel): self
-    {
-        $this->Tel = $Tel;
-
-        return $this;
-    }
-
-    public function getDateNaiss(): ?string
-    {
-        return $this->Date_naiss;
-    }
-
-    public function setDateNaiss(string $Date_naiss): self
-    {
-        $this->Date_naiss = $Date_naiss;
-
-        return $this;
-    }
 
     public function getAdresse(): ?string
     {
-        return $this->Adresse;
+        return $this->adresse;
     }
 
-    public function setAdresse(string $Adresse): self
+    public function setAdresse(string $adresse): self
     {
-        $this->Adresse = $Adresse;
+        $this->adresse = $adresse;
 
         return $this;
     }
@@ -178,4 +159,18 @@ class Etudiants
 
         return $this;
     }
+
+    public function getNaissance(): ?string
+    {
+        return $this->naissance;
+    }
+
+    public function setNaissance(string $naissance): self
+    {
+        $this->naissance = $naissance;
+
+        return $this;
+    }
+
+
 }

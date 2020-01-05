@@ -5,19 +5,17 @@
 {% block body %}
     <section class="etudiant">
                 <h3>Nom complet de l'etudiant</h3>
-                <p> {{ etudiant.getNom() }} {{ etudiant.getPrenom() }}</p>
+                <p> {{ etudiant.nom }} {{ etudiant.prenom }}</p>
                 <h3>CNE</h3>
-                <p> {{ etudiant.getCNE() }}</p>
-                <h3>CIN</h3>
-                <p> {{ etudiant.getCIN() }}</p>
-                <h3>Numéro de téléphone</h3>
-                <p>{{ etudiant.getTel() }}</p>
+                <p> {{ etudiant.cne }}</p>
+                <h3>Adresse email</h3>
+                <p>{{ etudiant.email}}</p>
                 <h3>Date de naissance</h3>
-                <p>{{ etudiant.getDateNaiss() }}</p>
+                <p>{{ etudiant.naissance }}</p>
                 <h3>Adresse</h3>
-                <p>{{ etudiant.getAdresse() }}</p>
+                <p>{{ etudiant.adresse }}</p>
                 <h3>Niveau</h3>
-                <p>{{ etudiant.getNiveau() }}</p>
+                <p>{{ etudiant.niveau }}</p>
                 <h4>Les matieres</h4>
                 <ul>
                 {% for matiere in etudiant.niveau.matieres %}

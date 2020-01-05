@@ -12,13 +12,12 @@ class EtudiantType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('CNE')
-            ->add('Nom')
-            ->add('Prenom')
-            ->add('CIN')
-            ->add('Tel')
-            ->add('Date_naiss')
-            ->add('Adresse')
+            ->add('cne')
+            ->add('nom')
+            ->add('prenom')
+            ->add('email')
+            ->add('naissance')
+            ->add('adresse')
             ->add('id_e')
             ->add('niveau')
         ;
