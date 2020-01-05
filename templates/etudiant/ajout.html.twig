@@ -8,13 +8,9 @@
     {% else %}
         <h1 style="text-align:center; margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff">Inscrire un étudiant!</h1>
     {% endif %}
-    {# <div class="container">
+ 
     {{ form_start(formEtudiant) }}
-        <div class="col-6">
-        {{ form_widget(formEtudiant) }}
-        </div>
-    </div> #}
-
+        
     <div class="row" style = "margin : 3em">
         <div class="col-md-4">
             {{ form_row(formEtudiant.Nom) }}
@@ -54,14 +50,5 @@
         
     </div>
 
-    {# {{ form_row(formEtudiant.chef,{'attr': {'placeholder': "nom complet du chef de departement"}}) }}
-    {{ form_row(formEtudiant.description) }} #}
-    {# <button type="submit" class="btn btn-primary btn-lg btn-block" style = "margin : 3em" >
-        {% if editMode%}
-            Modifier
-        {% else %}
-            Ajouter
-        {% endif %}
-    </button> #}
     {{ form_end(formEtudiant) }}
 {% endblock %}
