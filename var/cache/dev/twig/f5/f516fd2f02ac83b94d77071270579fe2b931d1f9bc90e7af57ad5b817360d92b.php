@@ -86,63 +86,69 @@ class __TwigTemplate_852710ef876b39824ea0bcce2afc3f50e3e10e191916501f7a7c9872fc3
 
         // line 5
         echo "        <div class=\"jumbotron\">
+            
+                ";
+        // line 27
+        echo "
+
+            
             <div class=\"container\">
                 ";
-        // line 7
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 7, $this->source); })()), 'form_start');
+        // line 31
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 31, $this->source); })()), 'form_start');
         echo "
                 <div class=\"form-row\">
-                    <div class=\"col\" id= \"Nom\">
+                    <div class=\"col\">
                         ";
-        // line 10
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "Nom", [], "any", false, false, false, 10), 'row');
+        // line 34
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 34, $this->source); })()), "Nom", [], "any", false, false, false, 34), 'row');
         echo "
                     </div>
                     <div class=\"col\" id=\"Niveau\">
                         ";
-        // line 13
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), "niveau", [], "any", false, false, false, 13), 'row');
+        // line 37
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 37, $this->source); })()), "niveau", [], "any", false, false, false, 37), 'row');
         echo "
                     </div>
                     <div class=\"col\">
-                        <button class=\"btn btn-primary\">Rechercher</button>
+                        <button class=\"btn btn-primary\" style=\"margin-top:30px\">Rechercher</button>
                     </div>
                 </div>
                 ";
-        // line 19
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), 'form_end');
+        // line 43
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), 'form_end');
         echo "
             </div>
         </div>
         <h1 class=\"mt-4 mb-3 ml-5\">Liste des étudiants</h1>
         <div class=\"card-columns mt-4 ml-4 row\" id=\"cards\">
         ";
-        // line 24
+        // line 48
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["Etudiants"]) || array_key_exists("Etudiants", $context) ? $context["Etudiants"] : (function () { throw new RuntimeError('Variable "Etudiants" does not exist.', 24, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["Etudiants"]) || array_key_exists("Etudiants", $context) ? $context["Etudiants"] : (function () { throw new RuntimeError('Variable "Etudiants" does not exist.', 48, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["etudiant"]) {
-            // line 25
+            // line 49
             echo "            <div class=\"card border-primary ml-4 ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["etudiant"], "niveau", [], "any", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["etudiant"], "niveau", [], "any", false, false, false, 49), "html", null, true);
             echo "\" style=\"width: 18rem;\">
                 <img src=\"";
-            // line 26
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((("images/student" . twig_get_attribute($this->env, $this->source, $context["etudiant"], "getIdE", [], "method", false, false, false, 26)) . ".png")), "html", null, true);
+            // line 50
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((("images/student" . twig_get_attribute($this->env, $this->source, $context["etudiant"], "getIdE", [], "method", false, false, false, 50)) . ".png")), "html", null, true);
             echo "\" class=\"card-img-top\" alt=\"...\" height=\"220px\" width=\"120px\">
                 <div class=\"card-body\">
                     <h5 class=\"card-title\">Nom: ";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["etudiant"], "nom", [], "any", false, false, false, 28), "html", null, true);
+            // line 52
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["etudiant"], "nom", [], "any", false, false, false, 52), "html", null, true);
             echo " ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["etudiant"], "prenom", [], "any", false, false, false, 28), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["etudiant"], "prenom", [], "any", false, false, false, 52), "html", null, true);
             echo "</h5>
                     <p class=\"card-text\">Niveau: ";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["etudiant"], "niveau", [], "any", false, false, false, 29), "html", null, true);
+            // line 53
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["etudiant"], "niveau", [], "any", false, false, false, 53), "html", null, true);
             echo "</p>
                     <a href=\"";
-            // line 30
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant.show", ["id_e" => twig_get_attribute($this->env, $this->source, $context["etudiant"], "getIdE", [], "method", false, false, false, 30), "slug" => twig_get_attribute($this->env, $this->source, $context["etudiant"], "slug", [], "any", false, false, false, 30)]), "html", null, true);
+            // line 54
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant.show", ["id_e" => twig_get_attribute($this->env, $this->source, $context["etudiant"], "getIdE", [], "method", false, false, false, 54), "slug" => twig_get_attribute($this->env, $this->source, $context["etudiant"], "slug", [], "any", false, false, false, 54)]), "html", null, true);
             echo "\" class=\"btn btn-primary\">Plus d'actions</a>
                 </div>
             </div>
@@ -151,7 +157,7 @@ class __TwigTemplate_852710ef876b39824ea0bcce2afc3f50e3e10e191916501f7a7c9872fc3
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['etudiant'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 58
         echo "        </div>
 ";
         
@@ -174,7 +180,7 @@ class __TwigTemplate_852710ef876b39824ea0bcce2afc3f50e3e10e191916501f7a7c9872fc3
 
     public function getDebugInfo()
     {
-        return array (  155 => 34,  145 => 30,  141 => 29,  135 => 28,  130 => 26,  125 => 25,  121 => 24,  113 => 19,  104 => 13,  98 => 10,  92 => 7,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
+        return array (  161 => 58,  151 => 54,  147 => 53,  141 => 52,  136 => 50,  131 => 49,  127 => 48,  119 => 43,  110 => 37,  104 => 34,  98 => 31,  92 => 27,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -184,17 +190,41 @@ class __TwigTemplate_852710ef876b39824ea0bcce2afc3f50e3e10e191916501f7a7c9872fc3
 {% block title 'Voir liste des etudiants' %}
 {% block body %}
         <div class=\"jumbotron\">
+            
+                {# <div class=\"container\">
+                    <form method=\"GET\">
+                        <div class=\"col\" id= \"Nom\">
+                            <label for=\"nom\">Nom</label>
+                            <input type=\"text\" class=\"form-control\" id=\"nom\" aria-describedby=\"desc\" placeholder=\"Entrer le nom!\">
+                            <small id=\"desc\" class=\"form-text text-muted\">soit le nom soit le prenom!</small>
+                        </div>
+                        <div class=\"col\" id=\"Niveau\">
+                            <label for=\"niveau\">Niveau</label>
+                            <select class=\"form-control\" id=\"niveau\">
+                                <option>selectionnez</option>
+                                <option>GI1</option>
+                                <option>GI2</option>
+                            </select>
+                        </div>
+                        <div class=\"col\">
+                            <input type=\"submit\" class=\"btn btn-primary\" value=\"rechercher\">
+                        </div>
+                    </form>
+                </div> #}
+
+
+            
             <div class=\"container\">
                 {{ form_start(form)}}
                 <div class=\"form-row\">
-                    <div class=\"col\" id= \"Nom\">
+                    <div class=\"col\">
                         {{ form_row(form.Nom) }}
                     </div>
                     <div class=\"col\" id=\"Niveau\">
                         {{ form_row(form.niveau) }}
                     </div>
                     <div class=\"col\">
-                        <button class=\"btn btn-primary\">Rechercher</button>
+                        <button class=\"btn btn-primary\" style=\"margin-top:30px\">Rechercher</button>
                     </div>
                 </div>
                 {{ form_end(form)}}

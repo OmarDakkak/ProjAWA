@@ -91,46 +91,96 @@ class __TwigTemplate_abc4a8265c06ed2ff0efc3b791b18aeeaf932abcbbcccf37b341df857d8
         echo "    ";
         if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 6, $this->source); })())) {
             // line 7
-            echo "        <h1 class=\"\">Modifier l'étudiant!</h1>
+            echo "        <h1 style =\"text-align:center; margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff\">Modifier l'étudiant!</h1>
     ";
         } else {
             // line 9
-            echo "        <h1 style=\"margin-left:200px\">Inscrire l'étudiant!</h1>
+            echo "        <h1 style=\"text-align:center; margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff\">Inscrire un étudiant!</h1>
     ";
         }
         // line 11
-        echo "    <div class=\"container\">
-    ";
-        // line 12
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 12, $this->source); })()), 'form_start');
+        echo "    ";
+        // line 17
         echo "
-        <div class=\"col-6\">
-        ";
-        // line 14
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 14, $this->source); })()), 'widget');
+    <div class=\"row\" style = \"margin : 3em\">
+        <div class=\"col-md-4\">
+            ";
+        // line 20
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 20, $this->source); })()), "Nom", [], "any", false, false, false, 20), 'row');
         echo "
         </div>
-    </div>
+        <div class=\"col-md-4\">
+            ";
+        // line 23
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 23, $this->source); })()), "Prenom", [], "any", false, false, false, 23), 'row', ["label" => "Prénom"]);
+        echo "
+        </div>
+        <div class=\"col-md-4\">
+            ";
+        // line 26
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 26, $this->source); })()), "CNE", [], "any", false, false, false, 26), 'row', ["label" => "CNE"]);
+        echo "
+        </div>
+        <div class=\"col-md-4\">
+            ";
+        // line 29
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 29, $this->source); })()), "CIN", [], "any", false, false, false, 29), 'row', ["label" => "CIN"]);
+        echo "
+        </div>
+        <div class=\"col-md-4\">
+            ";
+        // line 32
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 32, $this->source); })()), "Tel", [], "any", false, false, false, 32), 'row', ["label" => "Numéro de téléphone"]);
+        echo "
+        </div>
+        <div class=\"col-md-4\">
+            ";
+        // line 35
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 35, $this->source); })()), "Adresse", [], "any", false, false, false, 35), 'row');
+        echo "
+        </div>
+        <div class=\"col-md-4\">
+            ";
+        // line 38
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 38, $this->source); })()), "id_e", [], "any", false, false, false, 38), 'row', ["label" => "Identifiant"]);
+        echo "
+        </div>
+        <div class=\"col-md-4\">
+            ";
+        // line 41
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 41, $this->source); })()), "niveau", [], "any", false, false, false, 41), 'row');
+        echo "
+        </div>
+        <div class=\"col-md-4\">
+            ";
+        // line 44
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 44, $this->source); })()), "Date_naiss", [], "any", false, false, false, 44), 'row', ["label" => "Date de naissance"]);
+        echo "
+        </div>
 
-    ";
-        // line 20
-        echo "    <button type=\"submit\" class=\"btn btn-success\">
+        <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\" style=\"margin-top:20px\">
         ";
-        // line 21
-        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 21, $this->source); })())) {
-            // line 22
+        // line 48
+        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 48, $this->source); })())) {
+            // line 49
             echo "            Modifier
         ";
         } else {
-            // line 24
+            // line 51
             echo "            Ajouter
         ";
         }
-        // line 26
+        // line 53
         echo "    </button>
+        
+    </div>
+
     ";
-        // line 27
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 27, $this->source); })()), 'form_end');
+        // line 59
+        echo "    ";
+        // line 66
+        echo "    ";
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formEtudiant"]) || array_key_exists("formEtudiant", $context) ? $context["formEtudiant"] : (function () { throw new RuntimeError('Variable "formEtudiant" does not exist.', 66, $this->source); })()), 'form_end');
         echo "
 ";
         
@@ -153,7 +203,7 @@ class __TwigTemplate_abc4a8265c06ed2ff0efc3b791b18aeeaf932abcbbcccf37b341df857d8
 
     public function getDebugInfo()
     {
-        return array (  133 => 27,  130 => 26,  126 => 24,  122 => 22,  120 => 21,  117 => 20,  110 => 14,  105 => 12,  102 => 11,  98 => 9,  94 => 7,  91 => 6,  81 => 5,  62 => 3,  51 => 1,  49 => 4,  36 => 1,);
+        return array (  182 => 66,  180 => 59,  174 => 53,  170 => 51,  166 => 49,  164 => 48,  157 => 44,  151 => 41,  145 => 38,  139 => 35,  133 => 32,  127 => 29,  121 => 26,  115 => 23,  109 => 20,  104 => 17,  102 => 11,  98 => 9,  94 => 7,  91 => 6,  81 => 5,  62 => 3,  51 => 1,  49 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -164,26 +214,65 @@ class __TwigTemplate_abc4a8265c06ed2ff0efc3b791b18aeeaf932abcbbcccf37b341df857d8
 {% form_theme formEtudiant 'bootstrap_4_layout.html.twig' %}
 {% block body %}
     {% if editMode%}
-        <h1 class=\"\">Modifier l'étudiant!</h1>
+        <h1 style =\"text-align:center; margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff\">Modifier l'étudiant!</h1>
     {% else %}
-        <h1 style=\"margin-left:200px\">Inscrire l'étudiant!</h1>
+        <h1 style=\"text-align:center; margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff\">Inscrire un étudiant!</h1>
     {% endif %}
-    <div class=\"container\">
+    {# <div class=\"container\">
     {{ form_start(formEtudiant) }}
         <div class=\"col-6\">
         {{ form_widget(formEtudiant) }}
         </div>
-    </div>
+    </div> #}
 
-    {# {{ form_row(formEtudiant.chef,{'attr': {'placeholder': \"nom complet du chef de departement\"}}) }}
-    {{ form_row(formEtudiant.description) }} #}
-    <button type=\"submit\" class=\"btn btn-success\">
+    <div class=\"row\" style = \"margin : 3em\">
+        <div class=\"col-md-4\">
+            {{ form_row(formEtudiant.Nom) }}
+        </div>
+        <div class=\"col-md-4\">
+            {{ form_row(formEtudiant.Prenom, {'label': 'Prénom'}) }}
+        </div>
+        <div class=\"col-md-4\">
+            {{ form_row(formEtudiant.CNE, {'label': 'CNE'}) }}
+        </div>
+        <div class=\"col-md-4\">
+            {{ form_row(formEtudiant.CIN, {'label': 'CIN'}) }}
+        </div>
+        <div class=\"col-md-4\">
+            {{ form_row(formEtudiant.Tel, {'label': 'Numéro de téléphone'}) }}
+        </div>
+        <div class=\"col-md-4\">
+            {{ form_row(formEtudiant.Adresse) }}
+        </div>
+        <div class=\"col-md-4\">
+            {{ form_row(formEtudiant.id_e, {'label': 'Identifiant'}) }}
+        </div>
+        <div class=\"col-md-4\">
+            {{ form_row(formEtudiant.niveau) }}
+        </div>
+        <div class=\"col-md-4\">
+            {{ form_row(formEtudiant.Date_naiss, {'label': 'Date de naissance'}) }}
+        </div>
+
+        <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\" style=\"margin-top:20px\">
         {% if editMode%}
             Modifier
         {% else %}
             Ajouter
         {% endif %}
     </button>
+        
+    </div>
+
+    {# {{ form_row(formEtudiant.chef,{'attr': {'placeholder': \"nom complet du chef de departement\"}}) }}
+    {{ form_row(formEtudiant.description) }} #}
+    {# <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\" style = \"margin : 3em\" >
+        {% if editMode%}
+            Modifier
+        {% else %}
+            Ajouter
+        {% endif %}
+    </button> #}
     {{ form_end(formEtudiant) }}
 {% endblock %}", "etudiant/ajout.html.twig", "/Applications/MAMP/htdocs/LearnSymfony/templates/etudiant/ajout.html.twig");
     }

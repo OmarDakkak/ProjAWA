@@ -3,17 +3,41 @@
 {% block title 'Voir liste des etudiants' %}
 {% block body %}
         <div class="jumbotron">
+            
+                {# <div class="container">
+                    <form method="GET">
+                        <div class="col" id= "Nom">
+                            <label for="nom">Nom</label>
+                            <input type="text" class="form-control" id="nom" aria-describedby="desc" placeholder="Entrer le nom!">
+                            <small id="desc" class="form-text text-muted">soit le nom soit le prenom!</small>
+                        </div>
+                        <div class="col" id="Niveau">
+                            <label for="niveau">Niveau</label>
+                            <select class="form-control" id="niveau">
+                                <option>selectionnez</option>
+                                <option>GI1</option>
+                                <option>GI2</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <input type="submit" class="btn btn-primary" value="rechercher">
+                        </div>
+                    </form>
+                </div> #}
+
+
+            
             <div class="container">
                 {{ form_start(form)}}
                 <div class="form-row">
-                    <div class="col" id= "Nom">
+                    <div class="col">
                         {{ form_row(form.Nom) }}
                     </div>
                     <div class="col" id="Niveau">
                         {{ form_row(form.niveau) }}
                     </div>
                     <div class="col">
-                        <button class="btn btn-primary">Rechercher</button>
+                        <button class="btn btn-primary" style="margin-top:30px">Rechercher</button>
                     </div>
                 </div>
                 {{ form_end(form)}}

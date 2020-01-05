@@ -4,25 +4,64 @@
 {% form_theme formEtudiant 'bootstrap_4_layout.html.twig' %}
 {% block body %}
     {% if editMode%}
-        <h1 class="">Modifier l'étudiant!</h1>
+        <h1 style ="text-align:center; margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff">Modifier l'étudiant!</h1>
     {% else %}
-        <h1 style="margin-left:200px">Inscrire l'étudiant!</h1>
+        <h1 style="text-align:center; margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff">Inscrire un étudiant!</h1>
     {% endif %}
-    <div class="container">
+    {# <div class="container">
     {{ form_start(formEtudiant) }}
         <div class="col-6">
         {{ form_widget(formEtudiant) }}
         </div>
-    </div>
+    </div> #}
 
-    {# {{ form_row(formEtudiant.chef,{'attr': {'placeholder': "nom complet du chef de departement"}}) }}
-    {{ form_row(formEtudiant.description) }} #}
-    <button type="submit" class="btn btn-success">
+    <div class="row" style = "margin : 3em">
+        <div class="col-md-4">
+            {{ form_row(formEtudiant.Nom) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(formEtudiant.Prenom, {'label': 'Prénom'}) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(formEtudiant.CNE, {'label': 'CNE'}) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(formEtudiant.CIN, {'label': 'CIN'}) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(formEtudiant.Tel, {'label': 'Numéro de téléphone'}) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(formEtudiant.Adresse) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(formEtudiant.id_e, {'label': 'Identifiant'}) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(formEtudiant.niveau) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(formEtudiant.Date_naiss, {'label': 'Date de naissance'}) }}
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:20px">
         {% if editMode%}
             Modifier
         {% else %}
             Ajouter
         {% endif %}
     </button>
+        
+    </div>
+
+    {# {{ form_row(formEtudiant.chef,{'attr': {'placeholder': "nom complet du chef de departement"}}) }}
+    {{ form_row(formEtudiant.description) }} #}
+    {# <button type="submit" class="btn btn-primary btn-lg btn-block" style = "margin : 3em" >
+        {% if editMode%}
+            Modifier
+        {% else %}
+            Ajouter
+        {% endif %}
+    </button> #}
     {{ form_end(formEtudiant) }}
 {% endblock %}

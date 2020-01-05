@@ -4,28 +4,53 @@
 
 {% block body %}
     <section class="etudiant">
-                <h3>Nom complet de l'etudiant</h3>
-                <p> {{ etudiant.getNom() }} {{ etudiant.getPrenom() }}</p>
-                <h3>CNE</h3>
-                <p> {{ etudiant.getCNE() }}</p>
-                <h3>CIN</h3>
-                <p> {{ etudiant.getCIN() }}</p>
-                <h3>Numéro de téléphone</h3>
-                <p>{{ etudiant.getTel() }}</p>
-                <h3>Date de naissance</h3>
-                <p>{{ etudiant.getDateNaiss() }}</p>
-                <h3>Adresse</h3>
-                <p>{{ etudiant.getAdresse() }}</p>
-                <h3>Niveau</h3>
-                <p>{{ etudiant.getNiveau() }}</p>
-                <h4>Les matieres</h4>
-                <ul>
-                {% for matiere in etudiant.niveau.matieres %}
-                    <li>{{ matiere }}</li>
-                {% endfor %}
-                </ul>
-                <img src="{{asset('images/student'~ etudiant.getIdE()~'.png')}}" class="card-img-top" alt="..." height="220px" width="120px">
-            <a href="{{ etudiant.getId }}/edit-Etudiant" class="btn btn-primary">Modifier etudiant</a>
+                 <h1 style ="text-align:center; margin-top: 80px; margin-bottom:30px;font-family: 'Bungee Inline', cursive; color : #007bff">Les Informations de l'étudiant</h1>
+                <img src="{{asset('images/student'~ etudiant.getIdE()~'.png')}}" class = "img-fluid img-profile mx-auto mb-2" alt="..." height="220px" width="260px" style="display: flex;flex-flow: row wrap;justify-content: center;">
+
+                 <div class="row" style = "margin : 4em">
+                            <div class="col-md-6">
+                                <h3>Nom complet</h3>
+                                <p> {{ etudiant.getNom() }} {{ etudiant.getPrenom() }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>CNE</h3>
+                                <p> {{ etudiant.getCNE() }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>CIN</h3>
+                                <p> {{ etudiant.getCIN() }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Numéro de téléphone</h3>
+                                <p>{{ etudiant.getTel() }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Date de naissance</h3>
+                                <p>{{ etudiant.getDateNaiss() }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Adresse</h3>
+                                <p>{{ etudiant.getAdresse() }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Niveau</h3>
+                                <p>{{ etudiant.getNiveau() }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Les matieres</h4>
+                                <ul>
+                                {% for matiere in etudiant.niveau.matieres %}
+                                    <li>{{ matiere }}</li>
+                                {% endfor %}
+                                </ul>
+                            </div>
+                            <a href="{{ etudiant.getId }}/edit-Etudiant" class="btn btn-primary btn-lg btn-block" style="margin-top:20px">Modifier l'étudiant</a>
+                            
+                            
+                        
+                 </div>
+                
+                
 
 
     </section>

@@ -53,15 +53,16 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
+        <link href=\"https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap\" rel=\"stylesheet\">
         ";
-        // line 7
+        // line 8
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 23
+        // line 28
         echo "    </head>
     <body>
             <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
                 <a class=\"navbar-brand\" href=\"";
-        // line 26
+        // line 31
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Gestion Etudiants</a>
                 <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -72,8 +73,8 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
                     <ul class=\"navbar-nav mr-auto\">
                     <li class=\"nav-item\">
                         <a class=\"nav-link ";
-        // line 34
-        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 34, $this->source); })()) == "etudiants"))) {
+        // line 39
+        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 39, $this->source); })()) == "etudiants"))) {
             echo "active";
         }
         echo "\"  href=\"";
@@ -83,8 +84,8 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
                     <li class=\"nav-item\">
                         <a class=\"nav-link ";
-        // line 38
-        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 38, $this->source); })()) == "etudiants"))) {
+        // line 43
+        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 43, $this->source); })()) == "etudiants"))) {
             echo "active";
         }
         echo "\"  href=\"";
@@ -94,8 +95,8 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
                     <li class=\"nav-item\">
                         <a class=\"nav-link ";
-        // line 42
-        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 42, $this->source); })()) == "etudiants"))) {
+        // line 47
+        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 47, $this->source); })()) == "etudiants"))) {
             echo "active";
         }
         echo "\"  href=\"";
@@ -105,8 +106,8 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
                     <li class=\"nav-item\">
                         <a class=\"nav-link ";
-        // line 46
-        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 46, $this->source); })()) == "etudiants"))) {
+        // line 51
+        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && ((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 51, $this->source); })()) == "etudiants"))) {
             echo "active";
         }
         echo "\"  href=\"";
@@ -114,20 +115,20 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
         echo "\"> Rapport des Étudiants</a>
                     </li>
                     ";
-        // line 51
+        // line 56
         echo "
                     ";
-        // line 63
+        // line 68
         echo "                    </ul>
                 </div>
             </nav>
         ";
-        // line 66
+        // line 71
         $this->displayBlock('body', $context, $blocks);
-        // line 67
+        // line 72
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 68
+        // line 73
         echo "        <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
@@ -135,7 +136,7 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
             
                 var Nom = window.location.href.split('?')[1].split('&')[0].split('=')[1];
                 ";
-        // line 75
+        // line 80
         echo "                var strings =document.getElementsByTagName('h5')
 
                 var Niveau = window.location.href.split('?')[1].split('&')[1].split('=')[1];
@@ -161,11 +162,18 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
             
             
             ";
-        // line 118
+        // line 123
         echo "            
             ";
-        // line 134
+        // line 139
         echo "        </script>
+        <script>
+            var elem = document.getElementById('niveau');
+            elem.classList.add(\"form-control\");
+
+            var elem1 = document.getElementById('Nom');
+            elem1.classList.add(\"form-control\");
+        </script>
     </body>
 </html>
 ";
@@ -196,7 +204,7 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
     }
 
-    // line 7
+    // line 8
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -206,18 +214,27 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 8
+        // line 9
         echo "        <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\"/>
         <style>
-            ";
-        // line 17
-        echo "            .btn-success {
+            .error[for='niveau']{
+                margin-right:10px;
+                margin-left:-30px
+            }
+            .error[for='Nom']{
+                margin-right:10px;
+            }
+            label{
+                margin-right:10px;
+            }
+            .btn-success {
                 margin-left: 170px;
 
             }
         </style>
+
         ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -227,7 +244,7 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
     }
 
-    // line 66
+    // line 71
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -245,7 +262,7 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
     }
 
-    // line 67
+    // line 72
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -275,7 +292,7 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
 
     public function getDebugInfo()
     {
-        return array (  249 => 67,  231 => 66,  216 => 17,  210 => 8,  200 => 7,  181 => 5,  168 => 134,  165 => 118,  139 => 75,  131 => 68,  128 => 67,  126 => 66,  121 => 63,  118 => 51,  109 => 46,  98 => 42,  87 => 38,  76 => 34,  65 => 26,  60 => 23,  58 => 7,  53 => 5,  47 => 1,);
+        return array (  266 => 72,  248 => 71,  218 => 9,  208 => 8,  189 => 5,  169 => 139,  166 => 123,  140 => 80,  132 => 73,  129 => 72,  127 => 71,  122 => 68,  119 => 56,  110 => 51,  99 => 47,  88 => 43,  77 => 39,  66 => 31,  61 => 28,  59 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -286,21 +303,26 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
+        <link href=\"https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap\" rel=\"stylesheet\">
         {% block stylesheets %}
         <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\"/>
         <style>
-            {# .required{
+            .error[for='niveau']{
                 margin-right:10px;
                 margin-left:-30px
             }
+            .error[for='Nom']{
+                margin-right:10px;
+            }
             label{
                 margin-right:10px;
-            } #}
+            }
             .btn-success {
                 margin-left: 170px;
 
             }
         </style>
+
         {% endblock %}
     </head>
     <body>
@@ -413,6 +435,13 @@ class __TwigTemplate_9908400dd64685d12894bd710c0039fa3e47925bea8124064a6d0ac2d97
                     break;  
 
             } #}
+        </script>
+        <script>
+            var elem = document.getElementById('niveau');
+            elem.classList.add(\"form-control\");
+
+            var elem1 = document.getElementById('Nom');
+            elem1.classList.add(\"form-control\");
         </script>
     </body>
 </html>

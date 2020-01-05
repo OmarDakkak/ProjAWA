@@ -86,69 +86,94 @@ class __TwigTemplate_af2b83c31646e1aeec6de4ca83b3a1cc1e6c8d6b1be2342c696c52c6327
 
         // line 6
         echo "    <section class=\"etudiant\">
-                <h3>Nom complet de l'etudiant</h3>
-                <p> ";
+                 <h1 style =\"text-align:center; margin-top: 80px; margin-bottom:30px;font-family: 'Bungee Inline', cursive; color : #007bff\">Les Informations de l'étudiant</h1>
+                <img src=\"";
         // line 8
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 8, $this->source); })()), "getNom", [], "method", false, false, false, 8), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((("images/student" . twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 8, $this->source); })()), "getIdE", [], "method", false, false, false, 8)) . ".png")), "html", null, true);
+        echo "\" class = \"img-fluid img-profile mx-auto mb-2\" alt=\"...\" height=\"220px\" width=\"260px\" style=\"display: flex;flex-flow: row wrap;justify-content: center;\">
+
+                 <div class=\"row\" style = \"margin : 4em\">
+                            <div class=\"col-md-6\">
+                                <h3>Nom complet</h3>
+                                <p> ";
+        // line 13
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 13, $this->source); })()), "getNom", [], "method", false, false, false, 13), "html", null, true);
         echo " ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 8, $this->source); })()), "getPrenom", [], "method", false, false, false, 8), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 13, $this->source); })()), "getPrenom", [], "method", false, false, false, 13), "html", null, true);
         echo "</p>
-                <h3>CNE</h3>
-                <p> ";
-        // line 10
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 10, $this->source); })()), "getCNE", [], "method", false, false, false, 10), "html", null, true);
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>CNE</h3>
+                                <p> ";
+        // line 17
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 17, $this->source); })()), "getCNE", [], "method", false, false, false, 17), "html", null, true);
         echo "</p>
-                <h3>CIN</h3>
-                <p> ";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 12, $this->source); })()), "getCIN", [], "method", false, false, false, 12), "html", null, true);
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>CIN</h3>
+                                <p> ";
+        // line 21
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 21, $this->source); })()), "getCIN", [], "method", false, false, false, 21), "html", null, true);
         echo "</p>
-                <h3>Numéro de téléphone</h3>
-                <p>";
-        // line 14
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 14, $this->source); })()), "getTel", [], "method", false, false, false, 14), "html", null, true);
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>Numéro de téléphone</h3>
+                                <p>";
+        // line 25
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 25, $this->source); })()), "getTel", [], "method", false, false, false, 25), "html", null, true);
         echo "</p>
-                <h3>Date de naissance</h3>
-                <p>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 16, $this->source); })()), "getDateNaiss", [], "method", false, false, false, 16), "html", null, true);
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>Date de naissance</h3>
+                                <p>";
+        // line 29
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 29, $this->source); })()), "getDateNaiss", [], "method", false, false, false, 29), "html", null, true);
         echo "</p>
-                <h3>Adresse</h3>
-                <p>";
-        // line 18
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 18, $this->source); })()), "getAdresse", [], "method", false, false, false, 18), "html", null, true);
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>Adresse</h3>
+                                <p>";
+        // line 33
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 33, $this->source); })()), "getAdresse", [], "method", false, false, false, 33), "html", null, true);
         echo "</p>
-                <h3>Niveau</h3>
-                <p>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 20, $this->source); })()), "getNiveau", [], "method", false, false, false, 20), "html", null, true);
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>Niveau</h3>
+                                <p>";
+        // line 37
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 37, $this->source); })()), "getNiveau", [], "method", false, false, false, 37), "html", null, true);
         echo "</p>
-                <h4>Les matieres</h4>
-                <ul>
-                ";
-        // line 23
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h4>Les matieres</h4>
+                                <ul>
+                                ";
+        // line 42
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 23, $this->source); })()), "niveau", [], "any", false, false, false, 23), "matieres", [], "any", false, false, false, 23));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 42, $this->source); })()), "niveau", [], "any", false, false, false, 42), "matieres", [], "any", false, false, false, 42));
         foreach ($context['_seq'] as $context["_key"] => $context["matiere"]) {
-            // line 24
-            echo "                    <li>";
+            // line 43
+            echo "                                    <li>";
             echo twig_escape_filter($this->env, $context["matiere"], "html", null, true);
             echo "</li>
-                ";
+                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['matiere'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 26
-        echo "                </ul>
-                <img src=\"";
-        // line 27
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((("images/student" . twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 27, $this->source); })()), "getIdE", [], "method", false, false, false, 27)) . ".png")), "html", null, true);
-        echo "\" class=\"card-img-top\" alt=\"...\" height=\"220px\" width=\"120px\">
-            <a href=\"";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 28, $this->source); })()), "getId", [], "any", false, false, false, 28), "html", null, true);
-        echo "/edit-Etudiant\" class=\"btn btn-primary\">Modifier etudiant</a>
+        // line 45
+        echo "                                </ul>
+                            </div>
+                            <a href=\"";
+        // line 47
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["etudiant"]) || array_key_exists("etudiant", $context) ? $context["etudiant"] : (function () { throw new RuntimeError('Variable "etudiant" does not exist.', 47, $this->source); })()), "getId", [], "any", false, false, false, 47), "html", null, true);
+        echo "/edit-Etudiant\" class=\"btn btn-primary btn-lg btn-block\" style=\"margin-top:20px\">Modifier l'étudiant</a>
+                            
+                            
+                        
+                 </div>
+                
+                
 
 
     </section>
@@ -174,7 +199,7 @@ class __TwigTemplate_af2b83c31646e1aeec6de4ca83b3a1cc1e6c8d6b1be2342c696c52c6327
 
     public function getDebugInfo()
     {
-        return array (  150 => 28,  146 => 27,  143 => 26,  134 => 24,  130 => 23,  124 => 20,  119 => 18,  114 => 16,  109 => 14,  104 => 12,  99 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  169 => 47,  165 => 45,  156 => 43,  152 => 42,  144 => 37,  137 => 33,  130 => 29,  123 => 25,  116 => 21,  109 => 17,  100 => 13,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -185,28 +210,53 @@ class __TwigTemplate_af2b83c31646e1aeec6de4ca83b3a1cc1e6c8d6b1be2342c696c52c6327
 
 {% block body %}
     <section class=\"etudiant\">
-                <h3>Nom complet de l'etudiant</h3>
-                <p> {{ etudiant.getNom() }} {{ etudiant.getPrenom() }}</p>
-                <h3>CNE</h3>
-                <p> {{ etudiant.getCNE() }}</p>
-                <h3>CIN</h3>
-                <p> {{ etudiant.getCIN() }}</p>
-                <h3>Numéro de téléphone</h3>
-                <p>{{ etudiant.getTel() }}</p>
-                <h3>Date de naissance</h3>
-                <p>{{ etudiant.getDateNaiss() }}</p>
-                <h3>Adresse</h3>
-                <p>{{ etudiant.getAdresse() }}</p>
-                <h3>Niveau</h3>
-                <p>{{ etudiant.getNiveau() }}</p>
-                <h4>Les matieres</h4>
-                <ul>
-                {% for matiere in etudiant.niveau.matieres %}
-                    <li>{{ matiere }}</li>
-                {% endfor %}
-                </ul>
-                <img src=\"{{asset('images/student'~ etudiant.getIdE()~'.png')}}\" class=\"card-img-top\" alt=\"...\" height=\"220px\" width=\"120px\">
-            <a href=\"{{ etudiant.getId }}/edit-Etudiant\" class=\"btn btn-primary\">Modifier etudiant</a>
+                 <h1 style =\"text-align:center; margin-top: 80px; margin-bottom:30px;font-family: 'Bungee Inline', cursive; color : #007bff\">Les Informations de l'étudiant</h1>
+                <img src=\"{{asset('images/student'~ etudiant.getIdE()~'.png')}}\" class = \"img-fluid img-profile mx-auto mb-2\" alt=\"...\" height=\"220px\" width=\"260px\" style=\"display: flex;flex-flow: row wrap;justify-content: center;\">
+
+                 <div class=\"row\" style = \"margin : 4em\">
+                            <div class=\"col-md-6\">
+                                <h3>Nom complet</h3>
+                                <p> {{ etudiant.getNom() }} {{ etudiant.getPrenom() }}</p>
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>CNE</h3>
+                                <p> {{ etudiant.getCNE() }}</p>
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>CIN</h3>
+                                <p> {{ etudiant.getCIN() }}</p>
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>Numéro de téléphone</h3>
+                                <p>{{ etudiant.getTel() }}</p>
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>Date de naissance</h3>
+                                <p>{{ etudiant.getDateNaiss() }}</p>
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>Adresse</h3>
+                                <p>{{ etudiant.getAdresse() }}</p>
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h3>Niveau</h3>
+                                <p>{{ etudiant.getNiveau() }}</p>
+                            </div>
+                            <div class=\"col-md-6\">
+                                <h4>Les matieres</h4>
+                                <ul>
+                                {% for matiere in etudiant.niveau.matieres %}
+                                    <li>{{ matiere }}</li>
+                                {% endfor %}
+                                </ul>
+                            </div>
+                            <a href=\"{{ etudiant.getId }}/edit-Etudiant\" class=\"btn btn-primary btn-lg btn-block\" style=\"margin-top:20px\">Modifier l'étudiant</a>
+                            
+                            
+                        
+                 </div>
+                
+                
 
 
     </section>
