@@ -8,12 +8,7 @@
     {% else %}
         <h1 style="text-align:center; margin-top: 80px; font-family: 'Bungee Inline', cursive; color : #007bff">Ajouter la note</h1>
     {% endif %}
-    {# <div class="container">
     {{ form_start(formNote) }}
-        <div class="col-6">
-        {{ form_widget(formNote) }}
-        </div>
-    </div> #}
 
     <div class="row" style = "margin : 3em">
         <div class="col-md-4">
@@ -35,15 +30,5 @@
     </button>
         
     </div>
-
-    {# {{ form_row(formNote.chef,{'attr': {'placeholder': "nom complet du chef de departement"}}) }}
-    {{ form_row(formNote.description) }} #}
-    {# <button type="submit" class="btn btn-primary btn-lg btn-block" style = "margin : 3em" >
-        {% if editMode%}
-            Modifier
-        {% else %}
-            Ajouter
-        {% endif %}
-    </button> #}
     {{ form_end(formNote) }}
 {% endblock %}
