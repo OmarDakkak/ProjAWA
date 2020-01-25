@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jan 05, 2020 at 04:52 PM
+-- Generation Time: Jan 24, 2020 at 10:30 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.8
 
@@ -39,7 +39,7 @@ CREATE TABLE `etudiants` (
 
 INSERT INTO `etudiants` (`id`, `cne`, `nom`, `prenom`, `cin`, `tel`, `date_naiss`, `adresse`, `id_e`, `niveau_id`) VALUES
 (1, 'Z132883456', 'Hajjioui', 'Abdelfettah', 'DO25055', '0623543749', '04-04-1998', '100, Zanqat Nador, Hay Essalam, Meknes', 1, 2),
-(2, 'Z132883456', 'Dakkak', 'Omar', 'Z608298', '0613265172', '21-06-1998', '41, bloc 4, Hay Al Andalouss Taza', 2, 2),
+(2, 'S149004168', 'Dakkak', 'Omar', 'Z608298', '0613265172', '21-06-1998', '41, bloc 4, Hay Al Andalouss Taza', 2, 2),
 (3, 'Z132883456', 'Karimi', 'Amine', 'Z60321', '0613215172', '23-07-1998', '21, bloc 2, Hay Al Qods, Taza', 3, 2),
 (4, 'Z132883456', 'Benkaddour', 'Aziz', 'I60321', '0623215172', '13-08-1998', '28, bloc 1, Hay Urshalim, Fez', 4, 1),
 (5, 'Z132883456', 'El Yaagoubi', 'Adam', 'Z621241', '0614215172', '13-02-1999', '55, bloc 5, Friouatou, Taza', 5, 1),
@@ -48,7 +48,7 @@ INSERT INTO `etudiants` (`id`, `cne`, `nom`, `prenom`, `cin`, `tel`, `date_naiss
 (8, 'Z141283456', 'Mokhtari', 'Zakaryae', 'S613122', '0612124521', '16-05-1998', '22, Hay Mellila, Beni Nsar, Nador', 8, 2),
 (9, 'Z141283456', 'Bendahan', 'Omar', 'Z608298', '0666063087', '21-06-1998', '42, Bloc 4, Hay Al Andalouss, Taza', 9, 2),
 (10, 'Z141213131', 'Camara', 'Mory', 'Z521409', '0666063211', '22-08-1998', 'Diourbel, Sénégal', 10, 2),
-(11, 'S148006142', 'Jouhayna', 'Hurtado', 'Z607398', '0672826152', '23-07-1998', '42, Friouatou, Taza', 11, 2);
+(11, 'S148006142', 'Maria', 'Valverde', 'Z607398', '0672826152', '23-07-1998', '32, Las Rozas, Madrid', 11, 2);
 
 -- --------------------------------------------------------
 
@@ -157,9 +157,9 @@ CREATE TABLE `note` (
 --
 
 INSERT INTO `note` (`id`, `etudiant_id`, `matiere_id`, `note`) VALUES
-(1, 2, 2, 20),
+(1, 2, 2, 17),
 (2, 1, 3, 19),
-(3, 4, 1, 0),
+(3, 4, 1, 14),
 (4, 5, 1, 0),
 (5, 10, 4, 18),
 (6, 9, 3, 20);

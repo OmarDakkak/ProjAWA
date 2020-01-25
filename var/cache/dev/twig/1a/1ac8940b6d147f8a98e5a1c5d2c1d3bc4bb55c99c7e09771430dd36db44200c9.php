@@ -94,7 +94,7 @@ class __TwigTemplate_38e2f7aae2ba69dfcb3be18cab98e244a35540190e03780a397b70866f8
                     <div class=\"col-md-6\">
                         <p class=\"promo-title\">Projet d'Applications WEB Avancées</p>
                         <p> Ceci est une application pour la gestion des etudiants, developpée en utilisant le Framework Symfony.</p>
-                        <p> Ce projet a été réalisé par : Omar Dakkak, Abdelfettah Hajjioui, Mory Moussa Camara, Chaymae Oundouh, Moutaai Souhail, Zouine Anas</p>
+                        <p> Ce projet a été réalisé par : Omar Dakkak, Abdelfettah Hajjioui, Mory Moussa Camara, Moutaai Souhail, Zouine Anas</p>
                         <p>Encadré par : Pr. Sara Koulali</p>
                     </div>
                     <div class=\"col-md-6 text-center\">
@@ -159,7 +159,7 @@ class __TwigTemplate_38e2f7aae2ba69dfcb3be18cab98e244a35540190e03780a397b70866f8
                     <div class=\"col-md-6\">
                         <p class=\"promo-title\">Projet d'Applications WEB Avancées</p>
                         <p> Ceci est une application pour la gestion des etudiants, developpée en utilisant le Framework Symfony.</p>
-                        <p> Ce projet a été réalisé par : Omar Dakkak, Abdelfettah Hajjioui, Mory Moussa Camara, Chaymae Oundouh, Moutaai Souhail, Zouine Anas</p>
+                        <p> Ce projet a été réalisé par : Omar Dakkak, Abdelfettah Hajjioui, Mory Moussa Camara, Moutaai Souhail, Zouine Anas</p>
                         <p>Encadré par : Pr. Sara Koulali</p>
                     </div>
                     <div class=\"col-md-6 text-center\">
@@ -213,6 +213,6 @@ class __TwigTemplate_38e2f7aae2ba69dfcb3be18cab98e244a35540190e03780a397b70866f8
                         </tbody>
                 </table>
             </div>
-        </div> #}", "Pages/home.html.twig", "/Applications/MAMP/htdocs/LearnSymfony/templates/Pages/home.html.twig");
+        </div> #}", "Pages/home.html.twig", "/Applications/MAMP/htdocs/ProjAWA/templates/Pages/home.html.twig");
     }
 }
