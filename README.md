@@ -7,7 +7,7 @@ Ceci est une application pour la gestion des etudiants, developpée en utilisant
 
 Ce projet a été réalisé par : Omar Dakkak, Abdelfettah Hajjioui, Mory Moussa Camara, Chaymae Oundouh, Moutaai Souhail, Zouine Anas
 
-## DMI contributeurs
+## ProjAWA contributeurs
 
 - Omar DAKKAK
 - Abdelfettah Hajjioui
